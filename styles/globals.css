@@ -1,14 +1,17 @@
-/* Глобальные стили для проекта, их можно дополнять и менять по желанию */
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+html {
+  min-block-size: 100%;
+}
+
 body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
+  min-block-size: 100vh;
   margin: 0 auto;
 }
 
@@ -20,6 +23,8 @@ h5,
 h6,
 p {
   margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 ul {
@@ -28,15 +33,17 @@ ul {
   list-style: none;
 }
 
-picture {
-  margin: 0;
-  padding: 0;
+img {
+  display: block;
+  max-inline-size: 100%;
 }
 
 button,
 a {
   color: currentColor;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+  font: inherit;
+}
+
+button {
+  border: 0;
 }
